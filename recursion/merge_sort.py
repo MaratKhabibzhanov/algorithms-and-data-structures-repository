@@ -13,11 +13,7 @@ def merge_sort(rand_list):
         else:
             rand_list.append(right_list[j])
             j += 1
-    if i < len(left_list):
-        rand_list.extend(left_list[i:])
-    else:
-        rand_list.extend(right_list[j:])
-    return rand_list
+    return rand_list + left_list[i:] + right_list[j:]
 
 
 merge_list = [80, 6, 8, 99, 340, 67, 80, 5, 6, 8, 22]
